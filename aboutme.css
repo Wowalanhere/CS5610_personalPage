@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.fixedheader{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+
+    top: 0;
+    left: 0;
+    position: fixed;
+
+
+    display: flex; 
+    justify-content: left;
+    align-items: center;
+
+}
+
+.headdivide{
+    flex-direction: column;
+}
+
+h1{
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+.logopw{
+    color: red;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: x-large;
+}
+
+a{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
+
+.wholecontainer{
+
+    margin-top: 80px;
+    display: grid;
+    grid-template-areas: 
+    "b f f g g g d"
+    "b f f g g g d"
+    "b f f . . . d"
+    "b i i . . . d"
+    "e e e e e e e";
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr) 80px;
+    
+
+    column-gap: 10px;
+    min-height: 100vh;
+    background-color: rgb(249, 250, 219);
+}
+
+
+.left{
+    grid-area: b;
+    background-color: rgb(61, 57, 57);
+}
+
+
+.right{
+    grid-area: d;
+    background-color: rgb(61, 57, 57);
+}
+
+.foot{
+    grid-area: e;
+    background-color: rgb(61, 57, 57);
+}
+
+
+.pict1{
+    padding-top: 10px;
+    grid-area: f;
+}
+
+
+.pict2{
+    padding-top: 10px;
+    grid-area: g;
+}
+
+
+.pict4{
+    grid-area: i;
+    padding: 20px;
+}
+
+.littlebox{
+    width: 10px;
+    height: 10px;
+    background-color: royalblue;
+}
+
+.littlebox:hover{
+
+    transform: scale(1.5, 1.5);
+    transition: 0.5ms;
+
+}
+
+p::first-letter{
+    font-size: xx-large;
+}
+
+
+@media screen and (max-width: 789px) {
+
+    .fixedheader{
+        width: 100%;
+        height: 160px;
+        background-color: black;
+    
+        top: 0;
+        left: 0;
+        position: fixed;
+    
+    
+        display: flex; 
+        justify-content: left;
+        align-items: center;
+        flex-wrap: wrap;
+    
+    }
+
+    .wholecontainer{
+
+    margin-top: 160px;
+    display: grid;
+    grid-template-areas: 
+    "f f g g g"
+    "f f g g g"
+    "f f . . ."
+    "i i . . ."
+    "e e e e e";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr) 80px;
+    
+
+    column-gap: 10px;
+    min-height: 100vh;
+    background-color: rgb(249, 250, 219);
+}
+
+a{
+    font-size: small;
+}
+
+    
+}
+
+
+    
+
+
+
+
+
+
+
+
